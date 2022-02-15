@@ -1,0 +1,12 @@
+[server]
+uri = "https://10.0.106.19/api"     # agnet 通信的服务器主节点连接地址
+
+[kafka]
+kafka_server = "10.0.106.19:9091"       # 连接 kafka 地址
+agent_msg_topic = "agentevent"          # 接收 agent 消息的 topic
+agent_resp_topic = "agentcallback"      # agent 响应消息的 topic
+event_topic = "raw_event"               # 监听事件发送的 topic
+
+[client]
+agent_name = ""  # agent的名称, 默认传空自动获取本地ip
+plugins = ["common", "forward"]
